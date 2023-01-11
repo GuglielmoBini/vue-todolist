@@ -29,6 +29,7 @@ const app = Vue.createApp({
   name: "ToDoList",
   data() {
     return {
+      // array di oggetti
       tasks: [
         {
           text: "Fare la spesa",
@@ -60,6 +61,12 @@ const app = Vue.createApp({
         },
       ],
     };
+  },
+  methods: {
+    // funzione per rimuovere tasks
+    deleteTask(index) {
+      this.tasks.splice(index, 1);
+    },
   },
 });
 

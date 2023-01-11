@@ -38,11 +38,16 @@
         <main class="w-75 mx-auto mt-5">
           <ul class="list-group">
             <li
-              v-for="task in tasks"
-              class="list-group-item"
+              v-for="(task, i) in tasks"
+              class="list-group-item d-flex justify-content-between"
               :class="{'task-done' : task.done}"
             >
               {{task.text}}
+              <button
+                type="button"
+                class="btn-close"
+                @click="deleteTask(i)"
+              ></button>
             </li>
           </ul>
         </main>

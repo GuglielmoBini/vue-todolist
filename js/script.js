@@ -30,6 +30,10 @@ const app = Vue.createApp({
   data() {
     return {
       // array di oggetti
+      newTask: {
+        text: "",
+        done: false,
+      },
       tasks: [
         {
           text: "Fare la spesa",
@@ -66,6 +70,15 @@ const app = Vue.createApp({
     // funzione per rimuovere tasks
     deleteTask(index) {
       this.tasks.splice(index, 1);
+    },
+    // funzione per aggiungere un task alla lista
+    addTask() {
+      if (!this.newTask.text) {
+        alert("Devi inserire del testo!");
+      } else {
+        this.tasks.push(this.newTask);
+        this.newTask = { text: "", done: false };
+      }
     },
   },
 });

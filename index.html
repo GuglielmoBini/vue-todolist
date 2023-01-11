@@ -34,6 +34,22 @@
           <figure class="w-25 mx-auto">
             <img src="img/logo.png" alt="Logo Boolean" class="img-fluid" />
           </figure>
+          <div class="input-group w-50 mx-auto">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Aggiungi un Task"
+              v-model.trim="newTask.text"
+            />
+            <button
+              class="btn btn-outline-success"
+              type="button"
+              @click="addTask"
+            >
+              <i class="fa-solid fa-plus"></i>
+              AGGIUNGI
+            </button>
+          </div>
         </header>
         <main class="w-75 mx-auto mt-5">
           <ul class="list-group">

@@ -27,5 +27,26 @@
     <script defer src="js/script.js"></script>
     <title>Vue ToDoList</title>
   </head>
-  <body></body>
+  <body>
+    <div id="root">
+      <div class="container">
+        <header class="my-3">
+          <figure class="w-25 mx-auto">
+            <img src="img/logo.png" alt="Logo Boolean" class="img-fluid" />
+          </figure>
+        </header>
+        <main class="w-75 mx-auto mt-5">
+          <ul class="list-group">
+            <li
+              v-for="task in tasks"
+              class="list-group-item"
+              :class="{'task-done' : task.done}"
+            >
+              {{task.text}}
+            </li>
+          </ul>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>

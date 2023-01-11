@@ -28,6 +28,40 @@ Bonus:
 const app = Vue.createApp({
   name: "ToDoList",
   data() {
-    return {};
+    return {
+      tasks: [
+        {
+          text: "Fare la spesa",
+          done: false,
+        },
+        {
+          text: "Lavare la macchina",
+          done: false,
+        },
+        {
+          text: "Pulire il PC",
+          done: true,
+        },
+        {
+          text: "Andare in palestra",
+          done: false,
+        },
+        {
+          text: "Ordinare la pizza",
+          done: false,
+        },
+        {
+          text: "Fare merenda",
+          done: false,
+        },
+        {
+          text: "Portare fuori il cane",
+          done: true,
+        },
+      ],
+    };
   },
 });
+
+// monto app
+app.mount("#root");
